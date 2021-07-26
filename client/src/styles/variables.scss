@@ -1,0 +1,17 @@
+$breakpoints: (
+  "phone": 425px,
+  "MDphone": 525px,
+  "LGphone": 576px,
+  "tablet": 768px,
+  "SMdesktop": 991px,
+  "MDdesktop": 1200px,
+  "LGdesktop": 1920px
+) !default;
+
+$accent: orange;
+$fontsize: 14px;
+$textcolor: #333;
+$red: #fc171e;
+$grey: #808080;
+$system: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+$opensans: OpenSansDev, -apple-system, BlinkMacSystemFont, Arial, sans-serif;

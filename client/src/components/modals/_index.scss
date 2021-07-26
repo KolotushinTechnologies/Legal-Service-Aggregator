@@ -1,0 +1,98 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.modal::-webkit-scrollbar {
+  width: 5px; /* ширина для вертикального скролла */
+  height: 8px; /* высота для горизонтального скролла */
+  border-radius: 0 10px 10px 0;
+  background-color: #fff;
+  border: 1px solid #c0c0c0;
+}
+
+.modal::-webkit-scrollbar-thumb {
+  background-color: #c0c0c0;
+  border-radius: 0 10px 10px 0;
+  box-shadow: inset 1px 1px 10px #f3faf7;
+}
+
+.modal {
+  position: fixed;
+  top: 10%;
+  right: 50%;
+  transform: translate(50%, 0);
+  width: 30vw;
+  height: 370px;
+  max-width: 1000px;
+  max-height: 900px;
+  border: 1px solid #c0c0c0;
+  border-radius: 10px;
+  padding: 15px 30px 50px 30px;
+  background-color: #fff;
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  @include media('<=SMdesktop') {
+    width: 85vw !important;
+    height: 82vh !important;
+  }
+  overflow-y: auto;
+  &_active {
+    z-index: 100;
+    opacity: 1;
+    visibility: visible;
+  }
+  &_activeServiceEdit{
+    z-index: 100;
+    opacity: 1;
+    visibility: visible;
+    width: 65vw;
+    height: auto;
+  }
+  &__title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  &__close {
+    @include reset-btn();
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+  }
+  &__group {
+    margin-bottom: 20px;
+  }
+  &__agree-link {
+    &:visited {
+      color: currentColor;
+    }
+  }
+  &__footer {
+    text-align: center;
+    margin-top: 10px;
+    &-enter {
+      @include reset-btn();
+      margin-top: 10px;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+  &_overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+    &_active {
+      opacity: 1;
+      z-index: 10;
+      visibility: visible;
+    }
+  }
+}

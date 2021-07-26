@@ -1,0 +1,13 @@
+export { default as Navbar } from "./navbar";
+export { default as Settings } from "./settings";
+export { default as Transactions } from "./transactions";
+export { default as Profile } from "./profile";
+export { default as AnotherProfile } from "./another-profile.js";
+export { default as Favorites } from "./favorites";
+export { default as Payment } from "./payment";
+export { default as Search } from "./search";
+export { default as DealItem } from "./deal-item";
+export { default as DealConfirm } from "./deal-confirm";
+export { default as Replenishment } from "./replenishment";
+export { default as Notifications } from "./notifications";
+export { default as WithdrawalOfFunds } from "./withdrawalOfFunds";

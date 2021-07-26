@@ -1,0 +1,152 @@
+@import "../../styles/variables.scss"
+@import "../../styles/mixins.scss"
+
+.results
+    &__payment-methods
+        display: flex
+        width: max-content
+    &__top
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-wrap: wrap
+        margin-top: 65px
+        margin-bottom: 35px
+    &__title
+        font-size: 32px
+        margin-right: 10px
+        font-weight: 600
+    &__value
+        font-size: 22px
+        font-weight: 600
+    &__table-wrapper
+        position: relative
+        text-align: left
+        &::before
+            content: ""
+            position: absolute
+            top: 30px
+            left: 0
+            width: 100%
+            right: 0
+            height: 1px
+            background-color: #808080
+    &__table
+        display: table
+        width: 100%
+    &__header
+        display: table-header-group
+        position: relative
+        white-space: nowrap
+    &__col
+        display: table-cell
+        font-size: 14px
+        padding: 5px
+        font-weight: 500
+        &_header
+            font-weight: 900
+        &_rating
+            display: table-cell
+            text-align: center
+        &-star
+            margin-bottom: 1px
+            margin-right: 6px
+            color: #fc171e
+        &-rating-btn
+            +reset-btn
+            font-weight: 600
+            position: relative
+            &::after
+                content: "\f0de"
+                position: absolute
+                font-family: 'Font Awesome 5 Free'
+                transform: scale(1, -1)
+                top: -3px
+                right: -10px
+                color: #333
+                opacity: 1
+                transition: all .3s ease
+        &_contact
+            text-align: center
+        &_guarantor
+            display: inline-flex
+            justify-content: center
+            align-items: center
+            width: 100%
+        &-shield
+            color: #fc171e
+        &_payment
+        &_contact
+        &-btn
+            +reset-btn
+            display: inline-block
+            padding: 5px 13px
+            border: 1px solid #fc171e
+            border-radius: 4px
+            color: #fc171e
+            font-size: 13px
+            font-weight: 500
+            text-transform: uppercase
+            text-align: center
+            cursor: pointer
+        &_img
+            height: 15px
+            width: auto
+            &:not(:last-child)
+                margin-right: 5px
+        &_center
+            text-align: center
+        &-city
+            display: -webkit-box
+            max-width: 140px
+            -webkit-box-orient: vertical
+            overflow: hidden
+            text-overflow: ellipsis
+            white-space: normal
+            -webkit-line-clamp: 1
+        &_name
+            text-decoration: underline
+    &__body
+        display: table-row-group
+    &__content
+        display: table-row
+        &:nth-child(even)
+            background: #f3f3f3
+
+@media only screen and (max-width: 1440px)
+    // 
+
+@media only screen and (max-width: 1220px)
+    // 
+
+@media only screen and (max-width: 991px)
+    .results__title
+        font-size: 20px
+    .results__value
+        font-size: 18px
+    .results__table
+        min-width: 940px
+        &-wrapper
+            overflow: auto
+            &::before
+                min-width: 940px
+    .results__col
+        font-size: 13px
+    .results__col-btn
+        padding: 3px 5px
+        font-size: 12px
+    .results__col_img
+        height: 12px
+
+@media only screen and (max-width: 778px)
+    .results__top
+        margin-top: 35px
+    .results__title,
+    .results__value
+        font-size: 14px
+
+@media only screen and (max-width: 576px)
+    // 
+
+@media only screen and (max-width: 480px)
+    //

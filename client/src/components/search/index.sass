@@ -1,0 +1,213 @@
+@import "../../styles/variables.scss"
+@import "../../styles/mixins.scss"
+
+.advanced-search
+    margin-top: 50px
+    max-width: 950px
+    width: 100%
+    text-align: left
+    background-color: #fff
+    transition: all .3s ease
+    &__title
+        font-size: 20px
+        font-weight: 600
+        line-height: 1
+        margin-bottom: 15px
+    &__input-buttons
+        flex: 1
+        display: inline-flex
+        align-items: center
+        border: 1px solid #787878
+        border-radius:
+        height: 35px
+    &__input-group
+        flex-basis: 25%
+        height: 100%
+    &__input-button
+        display: none
+        height: 100%
+        &:checked
+            + label
+                background-color: #fc171e
+                color: #fff
+    &__input-label
+        display: inline-flex
+        justify-content: center
+        align-items: center
+        width: 100%
+        height: 34px
+        font-size: 14px
+        transition: all .3s ease
+        cursor: pointer
+    &__group
+        display: flex
+        align-items: center
+        margin-bottom: 15px
+    &__label
+        flex: 0 0 280px
+        font-weight: 500
+        font-size: 14px
+        color: #333
+        margin-bottom: 5px
+    &__text
+        flex-basis: 35%
+        font-weight: 500
+        font-size: 14px
+        color: #333
+        margin-bottom: 5px
+    &__input
+        height: 35px
+        font-size: 14px
+        margin-right: 10px
+        background-color: #fff
+        border-radius:
+        padding: 3.7px 7.5px
+        flex-basis: 160px
+        width: 160px
+        border: 1px solid #787878
+        color: #333
+        font-weight: 600
+        &::placeholder
+            color: #333
+            font-weight: 600
+    &__range-wrapper
+        position: relative
+        flex: 1
+    &__custom-input
+        display: none
+        &:checked
+            + label
+                &::after
+                    opacity: 1
+    &__custom-input-wrapper
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+    &__custom-label
+        position: relative
+        align-items: center
+        height: 25px
+        display: flex
+        flex-direction: row
+        flex-wrap: nowrap
+        &::before
+            content: ""
+            position: absolute
+            top: 0
+            width: 25px
+            height: 25px
+            color: #333
+            border-radius: 4px
+            border: 1px solid #787878
+        &::after
+            content: "\f00c"
+            position: absolute
+            top: 0
+            color: #fc171e
+            left: 4px
+            font-family: "Font Awesome 5 Free"
+            font-weight: 600
+            display: flex
+            font-size: 16px
+            align-items: center
+            justify-content: center
+            opacity: 0
+            transition: all .3s ease
+        img
+            max-width: 100%
+            width: auto
+            max-height: 25px
+            margin-left: 30px
+        &_payment
+            &:not(:last-child)
+                margin-right: 30px
+                margin-bottom: 20px
+    &__small
+        font-weight: 500
+        color: #333
+        flex: 1
+        text-align: left
+        padding: 0 10px
+        color: #333
+        font-weight: 600
+    &__direction-wrapper
+        flex: 1
+    &__rating-wrapper
+        width: 160px
+        display: flex
+    &__rating
+        flex: 1
+    &__city-wrapper
+        flex: 1
+    &__btn-wrapper
+        margin-top: 40px
+        padding-left: 280px
+    &__btn-submit
+        box-shadow: none
+        background-color: #fc171e
+        height: 43px
+        padding: 10px 30px
+
+.rating
+    direction: rtl
+    unicode-bidi: bidi-override
+    color: #ddd
+
+.rating input
+    display: none
+
+.rating label
+    font-size: 20px
+    &:not(:last-child)
+        margin-left: 5px
+
+.rating label:hover,
+.rating label:hover ~ label,
+.rating input:checked + label,
+.rating input:checked + label ~ label
+    color: #fc171e
+
+@media only screen and (max-width: 992px)
+    .rating label
+        font-size: 15px
+    .advanced-search__title
+        font-size: 18px
+        margin-bottom: 30px
+    .advanced-search__custom-label img
+        max-height: 15px
+
+@media only screen and (max-width: 768px)
+    .advanced-search
+        margin-top: 25px
+    .advanced-search__group
+        flex-wrap: wrap
+        margin-bottom: 20px
+        &_garant
+            flex-wrap: nowrap
+    .advanced-search__label
+        flex-basis: 100%
+        &_garant
+            flex-basis: auto
+            margin-right: 15px
+    .advanced-search__direction-small,
+        font-size: 13px
+    .advanced-search__custom-label img
+        max-height: 15px
+    .advanced-search__btn-wrapper
+        margin-top: 20px
+        padding: 0
+        text-align: center
+    .advanced-search__input-label
+        height: 29px
+        font-size: 13px
+    .advanced-search__input-buttons
+        height: 30px
+    .advanced-search__range-wrapper
+        flex: 0 1 95%
+        margin: 0 auto
+    .advanced-search__custom-input-wrapper
+        flex-basis: 100%
+
+@media only screen and (max-width: 576px)
+    .advanced-search__input-label
+        font-size: 12px

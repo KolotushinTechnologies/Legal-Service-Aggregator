@@ -1,0 +1,22 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.admin-navigation {
+  @include media('<=SMdesktop') {
+    flex-direction: column;
+    display: flex;
+  }
+  &__btn {
+    transition: all 0.3s ease;
+    margin: 10px;
+    &:hover {
+      background-color: #e40007;
+    }
+    &:last-child {
+      margin-right: 10px;
+    }
+    &_active {
+      background-color: #e40007;
+    }
+  }
+}

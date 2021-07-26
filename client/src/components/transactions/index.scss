@@ -1,0 +1,36 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.transactions-list {
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+    &__item {
+        @include reset-btn();
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-width: 1000px;
+        width: 100%;
+        margin-bottom: 15px !important;
+        padding: 10px;
+        background-color: #fafafa;
+        @include media("<=tablet") {
+            padding: 5px 10px;
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+        @include media("<=LGphone") {
+            font-size: 12px
+        }
+        .grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            span {
+                margin: 0 10px;
+                text-align: center;
+            }
+        }
+    }
+}

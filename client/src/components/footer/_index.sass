@@ -1,0 +1,80 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+    
+.footer
+    margin-top: auto
+    width: 100%
+    bottom: 0
+    &__container
+        max-width: 1140px
+        margin: 0 auto
+        padding: 50px 20px
+    &__lists
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+    &__list
+        reset-ul
+        flex: 0 0 auto
+        text-align: left
+        &-item
+        &-link
+            color: #333
+            font-size: 14px
+            text-decoration: none
+            transition: all .3s ease
+            font-weight: 600
+            &:hover
+                color: #333
+                text-decoration: underline
+    &__copy
+        flex: 1 1 100%
+        text-align: center
+        margin: 50px 0 0 0
+        color: $red
+        font-weight: 600
+        font-size: 16px
+        &-img
+            display: inline-block
+            display: none
+            vertical-align: middle
+            width: 50px
+            height: auto
+            margin-right: 20px
+
+@media only screen and (max-width: 1440px) 
+    // 
+        
+@media only screen and (max-width: 1220px)
+    // 
+
+@media only screen and (max-width: 1000px) 
+    .footer
+        &__container
+            padding: 20px 16px
+        &__list-link
+            font-size: 13px
+        &__copy
+            font-size: 13px
+
+@media only screen and (max-width: 767px) 
+    .footer
+        &__list
+            flex: 1 1 50%
+            &_contacts
+                order: 6
+        &__copy
+            order: 7
+            
+@media only screen and (max-width: 576px) 
+    .footer
+        &__list
+            margin-bottom: 10px
+        &__list-link
+            text-decoration: underline
+            
+@media only screen and (max-width: 480px)
+    .footer
+        &__list
+            flex: 1 1 100%
+            text-align: center;

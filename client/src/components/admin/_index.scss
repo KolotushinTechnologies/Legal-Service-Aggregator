@@ -1,0 +1,76 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+  overflow-x: auto;
+  &__content {
+    width: 100%;
+  }
+  th {
+    white-space: nowrap;
+  }
+  th,
+  td {
+    text-align: left;
+    padding: 8px;
+  }
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  input {
+    padding: 10px;
+    height: 35px;
+    max-height: 35px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    width: 100%;
+  }
+  .input {
+    &__username {
+      min-width: 10px;
+    }
+    &__email {
+      min-width: 140px;
+    }
+    &__balance {
+      min-width: 85px;
+    }
+    &__city {
+      min-width: 120px;
+    }
+    &__rating {
+      width: 35px;
+      text-align: center;
+    }
+    &__role {
+      width: 200px;
+    }
+    &__password {
+      min-width: 100px;
+    }
+  }
+}
+
+.payment__yandex {
+  color: #fc0;
+  font-weight: bold;
+}
+
+.payment__visa {
+  color: #01adff;
+  font-weight: bold;
+}
+
+.payment__qiwi {
+  color: rgb(255, 130, 0);
+  font-weight: bold;
+}
+
+.payment__bitcoin {
+  color: #f2a900;
+  font-weight: bold;
+}
